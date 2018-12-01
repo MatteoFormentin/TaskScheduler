@@ -12,8 +12,7 @@ TaskScheduler::TaskScheduler(int initial_size = 2)
 //Return number of active task
 int TaskScheduler::addNewTask(String id, void (*callbackTask)(), int interval_millis = 0) //if zero task will run at every loop cycle
 {
-    //Expand, if needed, task container
-
+    //Expand (if needed) task array
     if (task_array[task_array_lenght - 1] != NULL)
     {
         Task **temp = new Task *[task_array_lenght + 2];
